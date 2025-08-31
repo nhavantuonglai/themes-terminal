@@ -1,6 +1,7 @@
 ---
 import SEO from '~/components/schema.astro';
-import Anti from '~/javascript/anticopy.astro';
+import Anticopy from '~/javascript/anticopy.astro';
+import Analytics from '~/javascript/analytics.astro';
 
 import '~/assets/tailwind.css';
 ---
@@ -13,23 +14,15 @@ import '~/assets/tailwind.css';
 
 		<SEO/>
 
+		<Analytics/>
+
 	</head>
 
 	<body class="antialiased text-default bg-page tracking-tight">
 
 		<slot/>
 
-		<Anti/>
-
-		<noscript>
-
-			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN6L7TJP"
-			
-				height="0" width="0" style="display:none;visibility:hidden">
-
-			</iframe>
-
-		</noscript>
+		<Anticopy/>
 
 		<style is:global>
 			img {
